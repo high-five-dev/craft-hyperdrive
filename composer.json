@@ -1,0 +1,51 @@
+{
+  "name": "high-five/craft-hyperdrive",
+  "description": "Light-speed Craft CMS development",
+  "version": "0.0.0",
+  "type": "craft-plugin",
+  "keywords": ["craft", "cms", "craftcms", "craft-plugin", "atomic-design", "components", "ui", "tailwind"],
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/high-five-dev/craft-hyperdrive/issues",
+    "source": "https://github.com/high-five-dev/craft-hyperdrive"
+  },
+  "authors": [
+    {
+      "name": "Harm Putman",
+      "email": "harm@high-five.dev"
+    }
+  ],
+  "require": {
+    "php": "^8.4.0",
+    "craftcms/cms": "^5.0.0",
+    "high-five/craft-base": "dev-main"
+  },
+  "require-dev": {
+    "craftcms/phpstan": "dev-main",
+    "symplify/easy-coding-standard": "^12.6"
+  },
+  "extra": {
+    "handle": "hyperdrive",
+    "name": "Hyperdrive",
+    "developer": "High Five",
+    "developerUrl": "https://www.high-five.dev",
+    "class": "highfive\\hyperdrive\\Hyperdrive"
+  },
+  "autoload": {
+    "psr-4": {
+      "highfive\\hyperdrive\\": "src/"
+    }
+  },
+  "scripts": {
+    "check-cs": "ecs",
+    "fix-cs": "ecs  --fix",
+    "phpstan": "phpstan --memory-limit=1G"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "craftcms/plugin-installer": true,
+      "yiisoft/yii2-composer": true
+    }
+  }
+}

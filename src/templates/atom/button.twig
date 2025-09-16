@@ -1,0 +1,7 @@
+{% set style = style ?? 'primary' %}
+
+{{ atom('a', {
+    url: url,
+    label: label,
+    classes: ['btn', 'btn--' ~ style]
+}) }}
