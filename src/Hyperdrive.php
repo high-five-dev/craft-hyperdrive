@@ -26,7 +26,7 @@ class Hyperdrive extends Plugin
         }
 
         Craft::$app->onInit(function () {
-            $this->registerTemplateRoots();
+            $this->registerTemplateRoots('components');
         });
     }
 }

@@ -1,0 +1,17 @@
+<div class="hero bg-base-200 min-h-screen">
+    <div class="hero-content text-center">
+        <div class="max-w-md">
+            {% if title is defined %}
+                <h1 class="text-5xl font-bold">{{ title }}</h1>
+            {% endif %}
+            {% if content is defined %}
+                <p class="py-6">{{ content }}</p>
+            {% endif %}
+            {% if buttons is defined %}
+                {% for button in buttons %}
+                    {{ atom('button', button) }}
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>

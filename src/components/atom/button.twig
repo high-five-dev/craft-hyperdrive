@@ -1,0 +1,10 @@
+{% set classes = ['btn'] %}
+{% if style is defined %}
+    {% set classes = classes|merge([style]) %}
+{% endif %}
+
+{{ atom('a', {
+    url: url,
+    label: label,
+    classes: classes
+}) }}
