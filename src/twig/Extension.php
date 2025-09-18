@@ -33,11 +33,7 @@ class Extension extends AbstractExtension
         } catch (Throwable $e) {
             Hyperdrive::warning("Render error: {$e->getMessage()}");
 
-            $content = $variables['content'] ?? null;
-
-            unset($variables['content']);
-
-            return Html::tag($name, $content, $variables);
+            return '';
         }
     }
 }
